@@ -11,5 +11,6 @@ test('Visual Comparison Test Demo', async ({ page },testinfo) => {
   expect(await page.screenshot()).toMatchSnapshot({ maxDiffPixels: 200 });
   const screenshot = await page.screenshot();
   await testinfo.attach('screenshot', { body: screenshot, contentType: 'image/png' });
+  
 
 });
